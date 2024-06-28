@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:uxui/screem/meeting_Page.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -10,6 +11,8 @@ class HomePage extends StatelessWidget {
         child: Padding(
           padding: const EdgeInsets.all(5),
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            
             children: [
               Expanded(
                 flex: 4,
@@ -159,46 +162,41 @@ class HomePage extends StatelessWidget {
                           color: Color.fromARGB(255, 156, 8, 201),
                           borderRadius: BorderRadius.circular(30)),
                       child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        mainAxisAlignment: MainAxisAlignment.spaceAround,
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Padding(
-                            padding: const EdgeInsets.only(
-                                left: 3, right: 3, top: 8),
-                            child: Row(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Container(
-                                  height: 45,
-                                  width: 45,
-                                  decoration: const BoxDecoration(
-                                    color: Color.fromARGB(150, 255, 255, 255),
-                                    shape: BoxShape.circle,
-                                  ),
-                                  child: Center(
-                                      child: Icon(
-                                    Icons.cake,
-                                    color: Colors.white,
-                                  )),
+                          Row(
+                          
+                            children: [
+                              Container(
+                                height: 45,
+                                width: 45,
+                                decoration: const BoxDecoration(
+                                  color: Color.fromARGB(150, 255, 255, 255),
+                                  shape: BoxShape.circle,
                                 ),
-                                Container(
-                                  width:
-                                      MediaQuery.of(context).size.width / 1.5,
-                                  child: ListTile(
-                                    title: Text(
-                                      "Making a birthday cake",
-                                      style: TextStyle(
-                                          fontWeight: FontWeight.bold,
-                                          color: Colors.white),
-                                    ),
-                                    subtitle: Text(
-                                      "07:30 AM",
-                                      style: TextStyle(color: Colors.grey),
-                                    ),
+                                child: Center(
+                                    child: Icon(
+                                  Icons.cake,
+                                  color: Colors.white,
+                                )),
+                              ),
+                              Container(
+                                width:MediaQuery.of(context).size.width / 1.6,
+                                child: ListTile(
+                                  title: Text(
+                                    "Making a birthday cake",
+                                    style: TextStyle(
+                                        fontWeight: FontWeight.bold,
+                                        color: Colors.white),
+                                  ),
+                                  subtitle: Text(
+                                    "07:30 AM",
+                                    style: TextStyle(color: Colors.grey),
                                   ),
                                 ),
-                              ],
-                            ),
+                              ),
+                            ],
                           ),
                           Padding(
                             padding: const EdgeInsets.only(
@@ -209,7 +207,9 @@ class HomePage extends StatelessWidget {
                                 decoration: BoxDecoration(
                                     shape: BoxShape.circle,
                                     color: Colors.white),
-                                child: Icon(Icons.arrow_upward)),
+                                   child: RotationTransition(
+                                     turns: new AlwaysStoppedAnimation(40 / 360),
+                                  child: Icon(Icons.arrow_upward))),
                           ),
                         ],
                       ),
@@ -220,37 +220,37 @@ class HomePage extends StatelessWidget {
                         height: MediaQuery.of(context).size.height / 3,
                         width: MediaQuery.of(context).size.width,
                         decoration: BoxDecoration(
-                            color: Color.fromARGB(255, 211, 208, 13),
+                            color: Color.fromARGB(255, 211, 207, 1),
                             borderRadius: BorderRadius.circular(30)),
                         child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                           mainAxisAlignment: MainAxisAlignment.spaceAround,
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Row(
-                              crossAxisAlignment: CrossAxisAlignment.start,
+                             
                               children: [
                                 Container(
                                   height: 45,
                                   width: 45,
                                   decoration: const BoxDecoration(
-                                    color: Color.fromARGB(55, 255, 255, 255),
+                                color: Color.fromARGB(150, 255, 255, 255),
                                     shape: BoxShape.circle,
                                   ),
                                   child: Center(
                                       child: Icon(
-                                    Icons.cake,
-                                    color: Colors.white,
+                                    Icons.shop,
+                                    color: Colors.black,
                                   )),
                                 ),
                                 Container(
                                   width:
-                                      MediaQuery.of(context).size.width / 1.5,
+                                      MediaQuery.of(context).size.width / 1.6,
                                   child: ListTile(
                                     title: Text(
-                                      "Making a birthday cake",
+                                      "Claim voucher shopai",
                                       style: TextStyle(
                                           fontWeight: FontWeight.bold,
-                                          color: Colors.white),
+                                          color: Colors.black),
                                     ),
                                     subtitle: Text(
                                       "07:30 AM",
@@ -262,14 +262,16 @@ class HomePage extends StatelessWidget {
                             ),
                             Padding(
                               padding: const EdgeInsets.only(
-                                  left: 3, right: 3, top: 8),
+                                  left: 3, right: 12, top: 8),
                               child: Container(
                                   height: 45,
                                   width: 45,
                                   decoration: BoxDecoration(
                                       shape: BoxShape.circle,
                                       color: Colors.white),
-                                  child: Icon(Icons.arrow_upward)),
+                                  child: RotationTransition(
+                                     turns: new AlwaysStoppedAnimation(40 / 360),
+                                    child: Icon(Icons.arrow_upward))),
                             ),
                           ],
                         ),
@@ -281,37 +283,38 @@ class HomePage extends StatelessWidget {
                         height: MediaQuery.of(context).size.height / 3,
                         width: MediaQuery.of(context).size.width,
                         decoration: BoxDecoration(
-                            color: Color.fromARGB(255, 150, 226, 7),
+                            color: Color.fromARGB(255, 144, 189, 86),
                             borderRadius: BorderRadius.circular(30)),
                         child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          mainAxisAlignment: MainAxisAlignment.spaceAround,
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Row(
-                              crossAxisAlignment: CrossAxisAlignment.start,
+                             
                               children: [
                                 Container(
                                   height: 45,
                                   width: 45,
                                   decoration: const BoxDecoration(
-                                    color: Color.fromARGB(55, 255, 255, 255),
+                                   color: Color.fromARGB(150, 255, 255, 255),
                                     shape: BoxShape.circle,
                                   ),
                                   child: Center(
                                       child: Icon(
-                                    Icons.cake,
-                                    color: Colors.white,
+                                    Icons.remove_red_eye_sharp,
+                                    color: Colors.black,
                                   )),
                                 ),
                                 Container(
+                                           
                                   width:
-                                      MediaQuery.of(context).size.width / 1.5,
+                                      MediaQuery.of(context).size.width / 1.6,
                                   child: ListTile(
                                     title: Text(
-                                      "Making a birthday cake",
+                                      "Workout-Arm day",
                                       style: TextStyle(
                                           fontWeight: FontWeight.bold,
-                                          color: Colors.white),
+                                          color: Colors.black),
                                     ),
                                     subtitle: Text(
                                       "07:30 AM",
@@ -321,13 +324,19 @@ class HomePage extends StatelessWidget {
                                 ),
                               ],
                             ),
-                            Container(
-                                height: 45,
-                                width: 45,
-                                decoration: BoxDecoration(
-                                    shape: BoxShape.circle,
-                                    color: Colors.white),
-                                child: Icon(Icons.arrow_upward)),
+                            Padding(
+                             padding: const EdgeInsets.only(
+                                  left: 3, right: 13, top: 10),
+                              child: Container(
+                                  height: 45,
+                                  width: 45,
+                                  decoration: BoxDecoration(
+                                      shape: BoxShape.circle,
+                                      color: Colors.white),
+                                  child: RotationTransition(
+                                     turns: new AlwaysStoppedAnimation(40 / 360),
+                                    child: Icon(Icons.arrow_upward))),
+                            ),
                           ],
                         ),
                       ),
@@ -338,156 +347,161 @@ class HomePage extends StatelessWidget {
                       top: 190,
                       child: RotationTransition(
                         turns: new AlwaysStoppedAnimation(-7 / 360),
-                        child: Container(
-                          height: MediaQuery.of(context).size.height / 4,
-                          width: MediaQuery.of(context).size.width / 1.5,
-                          decoration: BoxDecoration(
-                              color: Colors.black,
-                              borderRadius: BorderRadius.circular(30)),
-                          child: Padding(
-                            padding: const EdgeInsets.only(left: 3, right: 3),
-                            child: Column(
-                              children: [
-                                Row(
-                                  children: [
-                                    Container(
-                                      height: 45,
-                                      width: 45,
-                                      decoration: const BoxDecoration(
-                                        color:
-                                            Color.fromARGB(150, 255, 255, 255),
-                                        shape: BoxShape.circle,
-                                      ),
-                                      child: Center(
-                                          child: Icon(
-                                        Icons.cake,
-                                        color: Colors.white,
-                                      )),
-                                    ),
-                                    Container(
-                                      width: MediaQuery.of(context).size.width /
-                                          1.5,
-                                      child: ListTile(
-                                        title: Text(
-                                          "Meeting With Client",
-                                          style: TextStyle(
-                                              fontWeight: FontWeight.bold,
-                                              color: Colors.white),
+                        child:  InkWell(
+                          onTap: (){
+                            Navigator.push(context, MaterialPageRoute(builder: (context)=>MeetingPage()));
+                          },
+                          child: Container(
+                            height: MediaQuery.of(context).size.height / 4,
+                            width: MediaQuery.of(context).size.width / 1.5,
+                            decoration: BoxDecoration(
+                                color: Colors.black,
+                                borderRadius: BorderRadius.circular(30)),
+                            child: Padding(
+                              padding: const EdgeInsets.only(left: 3, right: 3),
+                              child: Column(
+                                children: [
+                                  Row(
+                                    children: [
+                                      Container(
+                                        height: 45,
+                                        width: 45,
+                                        decoration: const BoxDecoration(
+                                          color:
+                                              Color.fromARGB(150, 255, 255, 255),
+                                          shape: BoxShape.circle,
                                         ),
-                                        subtitle: Text(
-                                          "07:30 AM",
-                                          style: TextStyle(color: Colors.grey),
-                                        ),
+                                        child: Center(
+                                            child: Icon(
+                                          Icons.camera,
+                                          color: Colors.white,
+                                        )),
                                       ),
-                                    ),
-                                  ],
-                                ),
-                                Text(
-                                  "At this meeting, we will discuss the brief",
-                                  style: TextStyle(
-                                      color: Colors.white, fontSize: 20),
-                                ),
-                                Row(
-                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                  children: [
-                                    
-                                    Container(
-                                      height: 30,
-                                      width: 60,
-                                      decoration: BoxDecoration(
-                                          borderRadius:
-                                              BorderRadius.circular(20),
-                                          color: Colors.greenAccent),
-                                      child: Center(
-                                        child: Text(
-                                          "Work",
-                                          style: TextStyle(color: Colors.black),
-                                        ),
-                                      ),
-                                    ),
-                                    Container(
-                                      height: 30,
-                                      width: 100,
-                                      decoration: BoxDecoration(
-                                          borderRadius:
-                                              BorderRadius.circular(20),
-                                          border: Border.all(
-                                              width: 1, color: Colors.white)),
-                                      child: Center(
-                                        child: Text(
-                                          "Wed 19 Jun",
-                                          style: TextStyle(color: Colors.white),
-                                        ),
-                                      ),
-                                    ),
-                                    Container(
-                                      width: 80,
-                                      height: 30,
-                                      
-                                      child: Stack(
-                                        children: [
-                                          Container(
-                                            height: 30,
-                                            width: 30,
-                                            decoration:  BoxDecoration(
-                                                shape: BoxShape.circle,
-                                                border: Border.all(width: 1, color: Colors.white),
-                                                image: DecorationImage(
-                                                    image: AssetImage(
-                                                        "assets/images/profil.jpg"),
-                                                    fit: BoxFit.cover)),
+                                      Container(
+                                        width: MediaQuery.of(context).size.width /
+                                            1.5,
+                                        child: ListTile(
+                                          title: Text(
+                                            "Meeting With Client",
+                                            style: TextStyle(
+                                                fontWeight: FontWeight.bold,
+                                                color: Colors.white),
                                           ),
-                                             Positioned(
-                                              left: 10,
-                                            
-                                               child: Container(
-                                                                                         height: 30,
-                                                                                         width: 30,
-                                                                                         decoration:  BoxDecoration(
-                                                  shape: BoxShape.circle,
-                                                   border: Border.all(width: 1, color: Colors.white),
-                                                  image: DecorationImage(
-                                                      image: AssetImage(
-                                                          "assets/images/profil3.jpg"),
-                                                      fit: BoxFit.cover)),
-                                                                                       ),
-                                             ),
-                                                  Positioned(
-                                              left: 20,
-                                            
-                                               child: Container(
-                                                                                         height: 30,
-                                                                                         width: 30,
-                                                                                         decoration:  BoxDecoration(
-                                                                                           border: Border.all(width: 1, color: Colors.white),
-                                                  shape: BoxShape.circle,
-                                                  image: DecorationImage(
-                                                      image: AssetImage(
-                                                          "assets/images/profil1.jpg"),
-                                                      fit: BoxFit.cover)),
-                                                                                       ),
-                                             ),
-                                                   Positioned(
-                                              left: 40,
-                                            
-                                               child: Container(
-                                                                                         height: 30,
-                                                                                         width: 30,
-                                                                                         decoration:  BoxDecoration(
-                                                                                           border: Border.all(width: 1, color: Colors.white),
-                                                  shape: BoxShape.circle,
-                                                  image: DecorationImage(
-                                                      image: AssetImage(
-                                                          "assets/images/profil2.jpg"),
-                                                      fit: BoxFit.cover)),
-                                                                                       ),
-                                             )
-                                        ],
+                                          subtitle: Text(
+                                            "07:30 AM",
+                                            style: TextStyle(color: Colors.grey),
+                                          ),
+                                        ),
                                       ),
-                                    )
-                                  ],
-                                )
-                              ],
+                                    ],
+                                  ),
+                                  Text(
+                                    "At this meeting, we will discuss the brief",
+                                    style: TextStyle(
+                                        color: Colors.white, fontSize: 20),
+                                  ),
+                                  Row(
+                                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                    children: [
+                                      
+                                      Container(
+                                        height: 30,
+                                        width: 60,
+                                        decoration: BoxDecoration(
+                                            borderRadius:
+                                                BorderRadius.circular(20),
+                                            color: Colors.greenAccent),
+                                        child: Center(
+                                          child: Text(
+                                            "Work",
+                                            style: TextStyle(color: Colors.black),
+                                          ),
+                                        ),
+                                      ),
+                                      Container(
+                                        height: 30,
+                                        width: 100,
+                                        decoration: BoxDecoration(
+                                            borderRadius:
+                                                BorderRadius.circular(20),
+                                            border: Border.all(
+                                                width: 1, color: Colors.white)),
+                                        child: Center(
+                                          child: Text(
+                                            "Wed 19 Jun",
+                                            style: TextStyle(color: Colors.white),
+                                          ),
+                                        ),
+                                      ),
+                                      Container(
+                                        width: 80,
+                                        height: 30,
+                                        
+                                        child: Stack(
+                                          children: [
+                                            Container(
+                                              height: 30,
+                                              width: 30,
+                                              decoration:  BoxDecoration(
+                                                  shape: BoxShape.circle,
+                                                  border: Border.all(width: 1, color: Colors.white),
+                                                  image: DecorationImage(
+                                                      image: AssetImage(
+                                                          "assets/images/profil.jpg"),
+                                                      fit: BoxFit.cover)),
+                                            ),
+                                               Positioned(
+                                                left: 10,
+                                              
+                                                 child: Container(
+                                                                                           height: 30,
+                                                                                           width: 30,
+                                                                                           decoration:  BoxDecoration(
+                                                    shape: BoxShape.circle,
+                                                     border: Border.all(width: 1, color: Colors.white),
+                                                    image: DecorationImage(
+                                                        image: AssetImage(
+                                                            "assets/images/profil3.jpg"),
+                                                        fit: BoxFit.cover)),
+                                                                                         ),
+                                               ),
+                                                    Positioned(
+                                                left: 20,
+                                              
+                                                 child: Container(
+                                                                                           height: 30,
+                                                                                           width: 30,
+                                                                                           decoration:  BoxDecoration(
+                                                                                             border: Border.all(width: 1, color: Colors.white),
+                                                    shape: BoxShape.circle,
+                                                    image: DecorationImage(
+                                                        image: AssetImage(
+                                                            "assets/images/profil1.jpg"),
+                                                        fit: BoxFit.cover)),
+                                                                                         ),
+                                               ),
+                                                     Positioned(
+                                                left: 40,
+                                              
+                                                 child: Container(
+                                                                                           height: 30,
+                                                                                           width: 30,
+                                                                                           decoration:  BoxDecoration(
+                                                                                             border: Border.all(width: 1, color: Colors.white),
+                                                    shape: BoxShape.circle,
+                                                    image: DecorationImage(
+                                                        image: AssetImage(
+                                                            "assets/images/profil2.jpg"),
+                                                        fit: BoxFit.cover)),
+                                                                                         ),
+                                               )
+                                          ],
+                                        ),
+                                      )
+                                    ],
+                                  )
+                                ],
+                              ),
                             ),
                           ),
                         ),
