@@ -1,9 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:uxui/screem/calender_page.dart';
 import 'package:uxui/screem/meeting_Page.dart';
 
-class HomePage extends StatelessWidget {
+class HomePage extends StatefulWidget {
   const HomePage({super.key});
 
+  @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  bool toggle=false;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -102,19 +109,25 @@ class HomePage extends StatelessWidget {
                                   TextStyle(fontSize: 18, color: Colors.white),
                             )),
                           ),
-                          Container(
-                            height: 50,
-                            width: MediaQuery.of(context).size.width / 2.5,
-                            decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(20),
-                                color: Colors.white),
-                            child: Center(
-                                child: Text(
-                              "Calender",
-                              style:
-                                  TextStyle(fontSize: 18, color: Colors.black),
-                            )),
-                          ),
+                          
+                         InkWell(
+                          onTap: () {
+                            Navigator.push(context, MaterialPageRoute(builder: (context)=>CalenderPage()));
+                          },
+                           child: Container(
+                              height: 50,
+                              width: MediaQuery.of(context).size.width / 2.5,
+                              decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(20),
+                                  color: Colors.white),
+                              child: Center(
+                                  child: Text(
+                                "Calender",
+                                style:
+                                    TextStyle(fontSize: 18, color: Colors.black),
+                              )),
+                            ),
+                         ),
                           Container(
                             height: 50,
                             width: 50,
