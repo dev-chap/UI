@@ -12,8 +12,7 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   bool toggle = true;
-  
- 
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -93,7 +92,7 @@ class _HomePageState extends State<HomePage> {
                         ),
                       ],
                     ),
-                  Row(
+                    Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Container(
@@ -111,7 +110,7 @@ class _HomePageState extends State<HomePage> {
                         InkWell(
                           onTap: () {
                             setState(() {
-                              toggle=!toggle;
+                              toggle = !toggle;
                             });
                             Navigator.push(
                                 context,
@@ -147,226 +146,219 @@ class _HomePageState extends State<HomePage> {
                         ),
                       ],
                     ),
-                    
-                  
                   ],
                 ),
               ),
-            
               Expanded(
                 flex: 7,
                 child: Container(
-                  
                   child: Stack(
                     children: [
-                  Positioned(
-                    top: 2.h,
-                    child: Text(
-                      "Check your",
-                      style: TextStyle(fontSize: 40),
-                    ),
-                  ),
                       Positioned(
-                        top: 8.h,
-                        child:const Text(
+                        top: 1.h,
+                        child: Text(
+                          "Check your",
+                          style: TextStyle(fontSize: 40),
+                        ),
+                      ),
+                      Positioned(
+                        top: 7.h,
+                        child: const Text(
                           "schedule now",
                           style: TextStyle(fontSize: 40),
                         ),
                       ),
-                      
                       Positioned(
-                        top: 19.h,
+                        top: 16.h,
                         child: Container(
-                        height: MediaQuery.of(context).size.height / 2,
-                        width: MediaQuery.of(context).size.width,
-                        decoration: BoxDecoration(
-                            color: Color.fromARGB(255, 156, 8, 201),
-                            borderRadius: BorderRadius.circular(30)),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceAround,
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Row(
-                              children: [
-                                Container(
-                                  height: 7.h,
-                                  width: 13.w,
-                                  decoration: const BoxDecoration(
-                                    color: Color.fromARGB(150, 255, 255, 255),
-                                    shape: BoxShape.circle,
-                                  ),
-                                  child: const Center(
-                                      child: Icon(
-                                    Icons.cake,
-                                    color: Colors.white,
-                                  )),
-                                ),
-                                SizedBox(
-                                  width: MediaQuery.of(context).size.width / 1.6,
-                                  child: const ListTile(
-                                    title: Text(
-                                      "Making a birthday cake",
-                                      style: TextStyle(
-                                          fontWeight: FontWeight.bold,
-                                          color: Colors.white),
-                                    ),
-                                    subtitle: Text(
-                                      "07:30 AM",
-                                      style: TextStyle(color: Colors.grey),
-                                    ),
-                                  ),
-                                ),
-                              ],
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.only(
-                                  left: 3, right: 3, top: 8),
-                              child: Container(
-                                  height: 7.h,
-                                  width: 13.w,
-                                  decoration: const BoxDecoration(
+                          height: MediaQuery.of(context).size.height / 2,
+                          width: MediaQuery.of(context).size.width,
+                          decoration: BoxDecoration(
+                              color: Color.fromARGB(255, 156, 8, 201),
+                              borderRadius: BorderRadius.circular(30)),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceAround,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Row(
+                                children: [
+                                  Container(
+                                    height: 7.h,
+                                    width: 13.w,
+                                    decoration: const BoxDecoration(
+                                      color: Color.fromARGB(150, 255, 255, 255),
                                       shape: BoxShape.circle,
-                                      color: Colors.white),
-                                  child: RotationTransition(
-                                      turns: new AlwaysStoppedAnimation(40 / 360),
-                                      child: Icon(Icons.arrow_upward))),
-                            ),
-                          ],
-                        ),
-                                          ),
-                      ),
-                    Positioned(
-                      top: 28.h,
-                      child: Container(
-                        height: MediaQuery.of(context).size.height / 3,
-                        width: MediaQuery.of(context).size.width,
-                        decoration: BoxDecoration(
-                            color: Color.fromARGB(255, 211, 207, 1),
-                            borderRadius: BorderRadius.circular(30)),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceAround,
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Row(
-                              children: [
-                                Container(
-                                  height: 7.h,
-                                  width: 13.w,
-                                  decoration: const BoxDecoration(
-                                    color: Color.fromARGB(150, 255, 255, 255),
-                                    shape: BoxShape.circle,
-                                  ),
-                                  child: const Center(
-                                      child: Icon(
-                                    Icons.shop,
-                                    color: Colors.black,
-                                  )),
-                                ),
-                                SizedBox(
-                                  width:
-                                      MediaQuery.of(context).size.width / 1.6,
-                                  child: const ListTile(
-                                    title: Text(
-                                      "Claim voucher shopai",
-                                      style: TextStyle(
-                                          fontWeight: FontWeight.bold,
-                                          color: Colors.black),
                                     ),
-                                    subtitle: Text(
-                                      "07:30 AM",
-                                      style: TextStyle(color: Colors.grey),
+                                    child: const Center(
+                                        child: Icon(
+                                      Icons.cake,
+                                      color: Colors.white,
+                                    )),
+                                  ),
+                                  SizedBox(
+                                    width:
+                                        MediaQuery.of(context).size.width / 1.6,
+                                    child: const ListTile(
+                                      title: Text(
+                                        "Making a birthday cake",
+                                        style: TextStyle(
+                                            fontWeight: FontWeight.bold,
+                                            color: Colors.white),
+                                      ),
+                                      subtitle: Text(
+                                        "07:30 AM",
+                                        style: TextStyle(color: Colors.grey),
+                                      ),
                                     ),
                                   ),
-                                ),
-                              ],
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.only(
-                                  left: 3, right: 12, top: 8),
-                              child: Container(
-                                  height: 7.h,
-                                  width: 13.w,
-                                  decoration: const BoxDecoration(
-                                      shape: BoxShape.circle,
-                                      color: Colors.white),
-                                  child: RotationTransition(
-                                      turns:
-                                          new AlwaysStoppedAnimation(40 / 360),
-                                      child: Icon(Icons.arrow_upward))),
-                            ),
-                          ],
+                                ],
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.only(
+                                    left: 3, right: 3, top: 8),
+                                child: Container(
+                                    height: 7.h,
+                                    width: 13.w,
+                                    decoration: const BoxDecoration(
+                                        shape: BoxShape.circle,
+                                        color: Colors.white),
+                                    child: RotationTransition(
+                                        turns: new AlwaysStoppedAnimation(
+                                            40 / 360),
+                                        child: Icon(Icons.arrow_upward))),
+                              ),
+                            ],
+                          ),
                         ),
                       ),
-                    ),
-                    Positioned(
-                      top: 37.h,
-                      child: Container(
-                        height: MediaQuery.of(context).size.height / 3,
-                        width: MediaQuery.of(context).size.width,
-                        decoration: BoxDecoration(
-                            color: Color.fromARGB(255, 144, 189, 86),
-                            borderRadius: BorderRadius.circular(30)),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceAround,
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Row(
-                              children: [
-                                Container(
-                                  height: 7.h,
-                                  width: 13.w,
-                                  decoration: const BoxDecoration(
-                                    color: Color.fromARGB(150, 255, 255, 255),
-                                    shape: BoxShape.circle,
-                                  ),
-                                  child: const Center(
-                                      child: Icon(
-                                    Icons.remove_red_eye_sharp,
-                                    color: Colors.black,
-                                  )),
-                                ),
-                                SizedBox(
-                                  width:
-                                      MediaQuery.of(context).size.width / 1.6,
-                                  child: const ListTile(
-                                    title: Text(
-                                      "Workout-Arm day",
-                                      style: TextStyle(
-                                          fontWeight: FontWeight.bold,
-                                          color: Colors.black),
-                                    ),
-                                    subtitle: Text(
-                                      "07:30 AM",
-                                      style: TextStyle(color: Colors.grey),
-                                    ),
-                                  ),
-                                ),
-                              ],
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.only(
-                                  left: 3, right: 13, top: 10),
-                              child: Container(
-                                  height: 7.h,
-                                  width: 13.w,
-                                  decoration: const BoxDecoration(
+                      Positioned(
+                        top: 25.h,
+                        child: Container(
+                          height: MediaQuery.of(context).size.height / 3,
+                          width: MediaQuery.of(context).size.width,
+                          decoration: BoxDecoration(
+                              color: Color.fromARGB(255, 211, 207, 1),
+                              borderRadius: BorderRadius.circular(30)),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceAround,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Row(
+                                children: [
+                                  Container(
+                                    height: 7.h,
+                                    width: 13.w,
+                                    decoration: const BoxDecoration(
+                                      color: Color.fromARGB(150, 255, 255, 255),
                                       shape: BoxShape.circle,
-                                      color: Colors.white),
-                                  child: RotationTransition(
-                                      turns:
-                                          new AlwaysStoppedAnimation(40 / 360),
-                                      child: Icon(Icons.arrow_upward))),
-                            ),
-                          ],
+                                    ),
+                                    child: const Center(
+                                        child: Icon(
+                                      Icons.shop,
+                                      color: Colors.black,
+                                    )),
+                                  ),
+                                  SizedBox(
+                                    width:
+                                        MediaQuery.of(context).size.width / 1.6,
+                                    child: const ListTile(
+                                      title: Text(
+                                        "Claim voucher shopai",
+                                        style: TextStyle(
+                                            fontWeight: FontWeight.bold,
+                                            color: Colors.black),
+                                      ),
+                                      subtitle: Text(
+                                        "07:30 AM",
+                                        style: TextStyle(color: Colors.grey),
+                                      ),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.only(
+                                    left: 3, right: 12, top: 8),
+                                child: Container(
+                                    height: 7.h,
+                                    width: 13.w,
+                                    decoration: const BoxDecoration(
+                                        shape: BoxShape.circle,
+                                        color: Colors.white),
+                                    child: RotationTransition(
+                                        turns: new AlwaysStoppedAnimation(
+                                            40 / 360),
+                                        child: Icon(Icons.arrow_upward))),
+                              ),
+                            ],
+                          ),
                         ),
                       ),
-                    ),
-                    Positioned(
-                      right: 9,
-                      left: 9,
-                      top: 46.h,
-                      child: RotationTransition(
-                        turns: new AlwaysStoppedAnimation(-7 / 360),
+                      Positioned(
+                        top: 64.w,
+                        child: Container(
+                          height: MediaQuery.of(context).size.height / 3,
+                          width: MediaQuery.of(context).size.width,
+                          decoration: BoxDecoration(
+                              color: Color.fromARGB(255, 144, 189, 86),
+                              borderRadius: BorderRadius.circular(30)),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceAround,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Row(
+                                children: [
+                                  Container(
+                                    height: 7.h,
+                                    width: 13.w,
+                                    decoration: const BoxDecoration(
+                                      color: Color.fromARGB(150, 255, 255, 255),
+                                      shape: BoxShape.circle,
+                                    ),
+                                    child: const Center(
+                                        child: Icon(
+                                      Icons.remove_red_eye_sharp,
+                                      color: Colors.black,
+                                    )),
+                                  ),
+                                  SizedBox(
+                                    width:
+                                        MediaQuery.of(context).size.width / 1.6,
+                                    child: const ListTile(
+                                      title: Text(
+                                        "Workout-Arm day",
+                                        style: TextStyle(
+                                            fontWeight: FontWeight.bold,
+                                            color: Colors.black),
+                                      ),
+                                      subtitle: Text(
+                                        "07:30 AM",
+                                        style: TextStyle(color: Colors.grey),
+                                      ),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.only(
+                                    left: 3, right: 13, top: 10),
+                                child: Container(
+                                    height: 7.h,
+                                    width: 13.w,
+                                    decoration: const BoxDecoration(
+                                        shape: BoxShape.circle,
+                                        color: Colors.white),
+                                    child: RotationTransition(
+                                        turns: new AlwaysStoppedAnimation(
+                                            40 / 360),
+                                        child: Icon(Icons.arrow_upward))),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                      Positioned(
+                        top: 82.w,
                         child: InkWell(
                           onTap: () {
                             Navigator.push(
@@ -375,19 +367,20 @@ class _HomePageState extends State<HomePage> {
                                     builder: (context) => MeetingPage()));
                           },
                           child: Container(
-                            height: MediaQuery.of(context).size.height / 4,
-                            width: MediaQuery.of(context).size.width / 1.5,
+                            height: MediaQuery.of(context).size.height / 3,
+                            width: MediaQuery.of(context).size.width,
                             decoration: BoxDecoration(
                                 color: Colors.black,
                                 borderRadius: BorderRadius.circular(30)),
                             child: Padding(
                               padding: const EdgeInsets.only(left: 3, right: 3),
                               child: Column(
+                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                 children: [
                                   Row(
                                     children: [
                                       Padding(
-                                        padding: const EdgeInsets.only(left: 4),
+                                        padding: const EdgeInsets.only(left: 4, ),
                                         child: Container(
                                           height: 7.h,
                                           width: 13.w,
@@ -533,14 +526,14 @@ class _HomePageState extends State<HomePage> {
                                         ),
                                       )
                                     ],
-                                  )
+                                  ),
+                                  SizedBox(height: 1.h,)
                                 ],
                               ),
                             ),
                           ),
                         ),
                       ),
-                    ),
                     ],
                   ),
                 ),
