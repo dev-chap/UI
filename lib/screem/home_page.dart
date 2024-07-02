@@ -148,12 +148,14 @@ class _HomePageState extends State<HomePage> {
                       left: 0,
                       right: 0,
                       top: 0,
-                      bottom: 0,
                       child: Container(
+                        height: 40.w,
                         decoration: BoxDecoration(
                           color: Color.fromARGB(255, 156, 8, 201),
-                          borderRadius: BorderRadius.circular(10.sp),
+                          borderRadius: BorderRadius.circular(5.w),
                         ),
+                        alignment: Alignment.topCenter,
+                        padding: EdgeInsets.all(4.w),
                         child: Row(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
@@ -163,25 +165,28 @@ class _HomePageState extends State<HomePage> {
                                 shape: BoxShape.circle,
                               ),
                               padding: EdgeInsets.all(3.w),
-                              child: const Center(
-                                child: Icon(
-                                  Icons.cake,
-                                  color: Colors.white,
-                                ),
+                              child: Icon(
+                                Icons.cake,
+                                color: Colors.white,
                               ),
                             ),
+                            SizedBox(width: 16),
                             Expanded(
-                              child: ListTile(
-                                title: Text(
-                                  "Making a birthday cake",
-                                  style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white),
-                                ),
-                                subtitle: Text(
-                                  "07:30 AM",
-                                  style: TextStyle(color: Colors.grey),
-                                ),
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.stretch,
+                                children: [
+                                  Text(
+                                    "Making a birthday cake",
+                                    style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white),
+                                  ),
+                                  Text(
+                                    "07:30 AM",
+                                    style: TextStyle(color: Colors.grey),
+                                  ),
+                                ],
                               ),
                             ),
+                            SizedBox(width: 16),
                             Container(
                               decoration: const BoxDecoration(shape: BoxShape.circle, color: Colors.white),
                               padding: EdgeInsets.all(3.w),
@@ -192,244 +197,257 @@ class _HomePageState extends State<HomePage> {
                       ),
                     ),
                     Positioned(
-                      top: 28.h,
+                      left: 0,
+                      right: 0,
+                      top: 20.w,
                       child: Container(
-                        height: MediaQuery.of(context).size.height / 3,
-                        width: MediaQuery.of(context).size.width,
-                        decoration: BoxDecoration(color: Color.fromARGB(255, 211, 207, 1), borderRadius: BorderRadius.circular(30)),
+                        height: 40.w,
+                        decoration: BoxDecoration(
+                          color: Color.fromARGB(255, 211, 207, 1),
+                          borderRadius: BorderRadius.circular(5.w),
+                        ),
+                        padding: EdgeInsets.all(4.w),
                         child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceAround,
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Row(
-                              children: [
-                                Container(
-                                  height: 7.h,
-                                  width: 13.w,
-                                  decoration: const BoxDecoration(
-                                    color: Color.fromARGB(150, 255, 255, 255),
-                                    shape: BoxShape.circle,
-                                  ),
-                                  child: const Center(
-                                      child: Icon(
-                                    Icons.shop,
-                                    color: Colors.black,
-                                  )),
-                                ),
-                                SizedBox(
-                                  width: MediaQuery.of(context).size.width / 1.6,
-                                  child: const ListTile(
-                                    title: Text(
-                                      "Claim voucher shopai",
-                                      style: TextStyle(fontWeight: FontWeight.bold, color: Colors.black),
-                                    ),
-                                    subtitle: Text(
-                                      "07:30 AM",
-                                      style: TextStyle(color: Colors.grey),
-                                    ),
-                                  ),
-                                ),
-                              ],
+                            Container(
+                              decoration: const BoxDecoration(
+                                color: Color.fromARGB(150, 255, 255, 255),
+                                shape: BoxShape.circle,
+                              ),
+                              padding: EdgeInsets.all(3.w),
+                              child: Icon(
+                                Icons.shop,
+                                color: Colors.black,
+                              ),
                             ),
-                            Padding(
-                              padding: const EdgeInsets.only(left: 3, right: 12, top: 8),
-                              child: Container(
-                                  height: 7.h,
-                                  width: 13.w,
-                                  decoration: const BoxDecoration(shape: BoxShape.circle, color: Colors.white),
-                                  child: RotationTransition(turns: new AlwaysStoppedAnimation(40 / 360), child: Icon(Icons.arrow_upward))),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
-                    Positioned(
-                      top: 37.h,
-                      child: Container(
-                        height: MediaQuery.of(context).size.height / 3,
-                        width: MediaQuery.of(context).size.width,
-                        decoration: BoxDecoration(color: Color.fromARGB(255, 144, 189, 86), borderRadius: BorderRadius.circular(30)),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceAround,
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Row(
-                              children: [
-                                Container(
-                                  height: 7.h,
-                                  width: 13.w,
-                                  decoration: const BoxDecoration(
-                                    color: Color.fromARGB(150, 255, 255, 255),
-                                    shape: BoxShape.circle,
-                                  ),
-                                  child: const Center(
-                                      child: Icon(
-                                    Icons.remove_red_eye_sharp,
-                                    color: Colors.black,
-                                  )),
-                                ),
-                                SizedBox(
-                                  width: MediaQuery.of(context).size.width / 1.6,
-                                  child: const ListTile(
-                                    title: Text(
-                                      "Workout-Arm day",
-                                      style: TextStyle(fontWeight: FontWeight.bold, color: Colors.black),
-                                    ),
-                                    subtitle: Text(
-                                      "07:30 AM",
-                                      style: TextStyle(color: Colors.grey),
-                                    ),
-                                  ),
-                                ),
-                              ],
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.only(left: 3, right: 13, top: 10),
-                              child: Container(
-                                  height: 7.h,
-                                  width: 13.w,
-                                  decoration: const BoxDecoration(shape: BoxShape.circle, color: Colors.white),
-                                  child: RotationTransition(turns: new AlwaysStoppedAnimation(40 / 360), child: Icon(Icons.arrow_upward))),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
-                    Positioned(
-                      right: 9,
-                      left: 9,
-                      top: 46.h,
-                      child: RotationTransition(
-                        turns: new AlwaysStoppedAnimation(-7 / 360),
-                        child: InkWell(
-                          onTap: () {
-                            Navigator.push(context, MaterialPageRoute(builder: (context) => MeetingPage()));
-                          },
-                          child: Container(
-                            height: MediaQuery.of(context).size.height / 4,
-                            width: MediaQuery.of(context).size.width / 1.5,
-                            decoration: BoxDecoration(color: Colors.black, borderRadius: BorderRadius.circular(30)),
-                            child: Padding(
-                              padding: const EdgeInsets.only(left: 3, right: 3),
+                            SizedBox(width: 16),
+                            Expanded(
                               child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.stretch,
                                 children: [
-                                  Row(
-                                    children: [
-                                      Padding(
-                                        padding: const EdgeInsets.only(left: 4),
-                                        child: Container(
-                                          height: 7.h,
-                                          width: 13.w,
-                                          decoration: const BoxDecoration(
-                                            color: Color.fromARGB(150, 255, 255, 255),
-                                            shape: BoxShape.circle,
-                                          ),
-                                          child: const Center(
-                                              child: Icon(
-                                            Icons.camera,
-                                            color: Colors.white,
-                                          )),
-                                        ),
-                                      ),
-                                      SizedBox(
-                                        width: MediaQuery.of(context).size.width / 1.5,
-                                        child: const ListTile(
-                                          title: Text(
-                                            "Meeting With Client",
-                                            style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white),
-                                          ),
-                                          subtitle: Text(
-                                            "07:30 AM",
-                                            style: TextStyle(color: Colors.grey),
-                                          ),
-                                        ),
-                                      ),
-                                    ],
+                                  Text(
+                                    "Claim voucher shopai",
+                                    style: TextStyle(fontWeight: FontWeight.bold, color: Colors.black),
                                   ),
-                                  const Text(
-                                    "At this meeting, we will discuss the brief",
-                                    style: TextStyle(color: Colors.white, fontSize: 20),
+                                  Text(
+                                    "07:30 AM",
+                                    style: TextStyle(color: Colors.grey),
                                   ),
-                                  Row(
-                                    mainAxisAlignment: MainAxisAlignment.spaceAround,
-                                    children: [
-                                      Container(
-                                        height: 5.h,
-                                        width: 20.w,
-                                        decoration: BoxDecoration(borderRadius: BorderRadius.circular(20), color: Colors.greenAccent),
-                                        child: const Center(
-                                          child: Text(
-                                            "Work",
-                                            style: TextStyle(color: Colors.black),
-                                          ),
+                                ],
+                              ),
+                            ),
+                            SizedBox(width: 16),
+                            Container(
+                              decoration: const BoxDecoration(shape: BoxShape.circle, color: Colors.white),
+                              padding: EdgeInsets.all(3.w),
+                              child: RotationTransition(turns: new AlwaysStoppedAnimation(40 / 360), child: Icon(Icons.arrow_upward)),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                    Positioned(
+                      left: 0,
+                      right: 0,
+                      top: 40.w,
+                      child: Container(
+                        height: 40.w,
+                        decoration: BoxDecoration(
+                          color: Color.fromARGB(255, 144, 189, 86),
+                          borderRadius: BorderRadius.circular(5.w),
+                        ),
+                        padding: EdgeInsets.all(4.w),
+                        child: Row(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Container(
+                              decoration: const BoxDecoration(
+                                color: Color.fromARGB(150, 255, 255, 255),
+                                shape: BoxShape.circle,
+                              ),
+                              padding: EdgeInsets.all(3.w),
+                              child: Icon(
+                                Icons.remove_red_eye_sharp,
+                                color: Colors.black,
+                              ),
+                            ),
+                            SizedBox(width: 16),
+                            Expanded(
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.stretch,
+                                children: [
+                                  Text(
+                                    "Workout-Arm day",
+                                    style: TextStyle(fontWeight: FontWeight.bold, color: Colors.black),
+                                  ),
+                                  Text(
+                                    "07:30 AM",
+                                    style: TextStyle(color: Colors.grey),
+                                  ),
+                                ],
+                              ),
+                            ),
+                            SizedBox(width: 16),
+                            Container(
+                              decoration: const BoxDecoration(shape: BoxShape.circle, color: Colors.white),
+                              padding: EdgeInsets.all(3.w),
+                              child: RotationTransition(turns: new AlwaysStoppedAnimation(40 / 360), child: Icon(Icons.arrow_upward)),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                    Positioned(
+                      right: 0,
+                      left: 0,
+                      top: 60.w,
+                      child: InkWell(
+                        onTap: () {
+                          Navigator.push(context, MaterialPageRoute(builder: (context) => MeetingPage()));
+                        },
+                        child: Container(
+                          decoration: BoxDecoration(color: Colors.black, borderRadius: BorderRadius.circular(5.w)),
+                          padding: EdgeInsets.all(4.w),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Row(
+                                children: [
+                                  Container(
+                                    padding: EdgeInsets.all(3.w),
+                                    decoration: const BoxDecoration(
+                                      color: Color.fromARGB(150, 255, 255, 255),
+                                      shape: BoxShape.circle,
+                                    ),
+                                    child: Icon(
+                                      Icons.camera,
+                                      color: Colors.white,
+                                    ),
+                                  ),
+                                  SizedBox(width: 4.w),
+                                  Expanded(
+                                    child: Column(
+                                      crossAxisAlignment: CrossAxisAlignment.start,
+                                      children: [
+                                        Text(
+                                          "Meeting With Client",
+                                          style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white),
+                                        ),
+                                        Text(
+                                          "07:30 AM",
+                                          style: TextStyle(color: Colors.grey),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                ],
+                              ),
+                              SizedBox(height: 16),
+                              Text(
+                                "At this meeting, we will discuss the brief",
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 16.sp,
+                                ),
+                              ),
+                              SizedBox(height: 8.w),
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                                children: [
+                                  Expanded(
+                                    child: Container(
+                                      decoration: BoxDecoration(borderRadius: BorderRadius.circular(10.w), color: Colors.greenAccent),
+                                      padding: EdgeInsets.all(2.w),
+                                      child: Text(
+                                        "Work",
+                                        style: TextStyle(color: Colors.black),
+                                        textAlign: TextAlign.center,
+                                      ),
+                                    ),
+                                  ),
+                                  SizedBox(width: 2.w),
+                                  Expanded(
+                                    child: Container(
+                                      decoration: BoxDecoration(
+                                        borderRadius: BorderRadius.circular(10.w),
+                                        border: Border.all(width: 1, color: Colors.white),
+                                      ),
+                                      padding: EdgeInsets.all(2.w),
+                                      child: const Center(
+                                        child: Text(
+                                          "Wed 19 Jun",
+                                          style: TextStyle(color: Colors.white),
+                                          textAlign: TextAlign.center,
                                         ),
                                       ),
-                                      Container(
-                                        height: 5.h,
-                                        width: 30.w,
-                                        decoration:
-                                            BoxDecoration(borderRadius: BorderRadius.circular(20), border: Border.all(width: 1, color: Colors.white)),
-                                        child: const Center(
-                                          child: Text(
-                                            "Wed 19 Jun",
-                                            style: TextStyle(color: Colors.white),
-                                          ),
-                                        ),
-                                      ),
-                                      Container(
-                                        width: 80,
-                                        height: 30,
-                                        child: Stack(
-                                          children: [
-                                            Container(
-                                              height: 6.h,
-                                              width: 11.w,
+                                    ),
+                                  ),
+                                  SizedBox(width: 2.w),
+                                  Expanded(
+                                    child: SizedBox(
+                                      height: 12.w,
+                                      child: Stack(
+                                        children: [
+                                          Positioned(
+                                            top: 0,
+                                            bottom: 0,
+                                            right: 12.w,
+                                            child: Container(
+                                              height: 10.w,
+                                              width: 10.w,
                                               decoration: BoxDecoration(
                                                   shape: BoxShape.circle,
                                                   border: Border.all(width: 1, color: Colors.white),
                                                   image: const DecorationImage(image: AssetImage("assets/images/profil.jpg"), fit: BoxFit.cover)),
                                             ),
-                                            Positioned(
-                                              left: 2.h,
-                                              child: Container(
-                                                height: 5.h,
-                                                width: 11.w,
-                                                decoration: BoxDecoration(
-                                                    shape: BoxShape.circle,
-                                                    border: Border.all(width: 1, color: Colors.white),
-                                                    image: const DecorationImage(image: AssetImage("assets/images/profil3.jpg"), fit: BoxFit.cover)),
-                                              ),
+                                          ),
+                                          Positioned(
+                                            top: 0,
+                                            bottom: 0,
+                                            right: 8.w,
+                                            child: Container(
+                                              height: 10.w,
+                                              width: 10.w,
+                                              decoration: BoxDecoration(
+                                                  shape: BoxShape.circle,
+                                                  border: Border.all(width: 1, color: Colors.white),
+                                                  image: const DecorationImage(image: AssetImage("assets/images/profil3.jpg"), fit: BoxFit.cover)),
                                             ),
-                                            Positioned(
-                                              left: 4.h,
-                                              child: Container(
-                                                height: 5.h,
-                                                width: 11.w,
-                                                decoration: BoxDecoration(
-                                                    border: Border.all(width: 1, color: Colors.white),
-                                                    shape: BoxShape.circle,
-                                                    image: const DecorationImage(image: AssetImage("assets/images/profil1.jpg"), fit: BoxFit.cover)),
-                                              ),
+                                          ),
+                                          Positioned(
+                                            top: 0,
+                                            bottom: 0,
+                                            right: 4.w,
+                                            child: Container(
+                                              height: 10.w,
+                                              width: 10.w,
+                                              decoration: BoxDecoration(
+                                                  border: Border.all(width: 1, color: Colors.white),
+                                                  shape: BoxShape.circle,
+                                                  image: const DecorationImage(image: AssetImage("assets/images/profil1.jpg"), fit: BoxFit.cover)),
                                             ),
-                                            Positioned(
-                                              left: 6.h,
-                                              child: Container(
-                                                height: 5.h,
-                                                width: 11.w,
-                                                decoration: BoxDecoration(
-                                                    border: Border.all(width: 1, color: Colors.white),
-                                                    shape: BoxShape.circle,
-                                                    image: const DecorationImage(image: AssetImage("assets/images/profil2.jpg"), fit: BoxFit.cover)),
-                                              ),
-                                            )
-                                          ],
-                                        ),
-                                      )
-                                    ],
+                                          ),
+                                          Positioned(
+                                            top: 0,
+                                            bottom: 0,
+                                            right: 0.w,
+                                            child: Container(
+                                              height: 10.w,
+                                              width: 10.w,
+                                              decoration: BoxDecoration(
+                                                  border: Border.all(width: 1, color: Colors.white),
+                                                  shape: BoxShape.circle,
+                                                  image: const DecorationImage(image: AssetImage("assets/images/profil2.jpg"), fit: BoxFit.cover)),
+                                            ),
+                                          )
+                                        ],
+                                      ),
+                                    ),
                                   )
                                 ],
-                              ),
-                            ),
+                              )
+                            ],
                           ),
                         ),
                       ),
