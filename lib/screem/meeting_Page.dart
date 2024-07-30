@@ -119,7 +119,7 @@ class _MeetingPageState extends State<MeetingPage> {
                                   width: 17.w,
                                   decoration: BoxDecoration(
                                     borderRadius: BorderRadius.circular(20),
-                                    color: Color.fromARGB(255, 144, 189, 86),
+                                    color: Color.fromARGB(210, 222, 234, 143),
                                   ),
                                   child: const Center(
                                     child: Text(
@@ -275,11 +275,11 @@ class _MeetingPageState extends State<MeetingPage> {
                                     decoration: BoxDecoration(
                                         borderRadius: BorderRadius.circular(20),
                                         color: const Color.fromARGB(
-                                            94, 155, 39, 176)),
+                                            225, 228, 223, 250)),
                                     child: const Center(
                                       child: Text(
                                         "join",
-                                        style: TextStyle(color: Colors.purple),
+                                        style: TextStyle(color: Color.fromARGB(255, 105, 76, 241)),
                                       ),
                                     ))
                               ],
@@ -366,7 +366,7 @@ class _MeetingPageState extends State<MeetingPage> {
                                   ],
                                 ),
                                 CupertinoSwitch(
-                                  activeColor: Colors.purple,
+                                  activeColor: const Color.fromARGB(255, 105, 76, 241),
                                   trackColor: CupertinoColors.inactiveGray,
                                   thumbColor: CupertinoColors.white,
                                   value: _showBlueBox,

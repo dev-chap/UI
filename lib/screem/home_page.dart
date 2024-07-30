@@ -13,7 +13,7 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   bool toggle = true;
 
-  @override
+ @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
@@ -125,7 +125,7 @@ class _HomePageState extends State<HomePage> {
                     width: 13.w,
                     decoration: const BoxDecoration(
                       shape: BoxShape.circle,
-                      color: Color.fromARGB(255, 156, 8, 201),
+                      color: Color.fromARGB(255, 105, 76, 241),
                     ),
                     child: const Center(
                         child: Text(
@@ -151,7 +151,7 @@ class _HomePageState extends State<HomePage> {
                       child: Container(
                         height: 40.w,
                         decoration: BoxDecoration(
-                          color: Color.fromARGB(255, 156, 8, 201),
+                          color: Color.fromARGB(255, 105, 76, 241),
                           borderRadius: BorderRadius.circular(5.w),
                         ),
                         alignment: Alignment.topCenter,
@@ -203,7 +203,7 @@ class _HomePageState extends State<HomePage> {
                       child: Container(
                         height: 40.w,
                         decoration: BoxDecoration(
-                          color: Color.fromARGB(255, 211, 207, 1),
+                          color: Color.fromARGB(255, 253, 199, 66),
                           borderRadius: BorderRadius.circular(5.w),
                         ),
                         padding: EdgeInsets.all(4.w),
@@ -254,7 +254,7 @@ class _HomePageState extends State<HomePage> {
                       child: Container(
                         height: 40.w,
                         decoration: BoxDecoration(
-                          color: Color.fromARGB(255, 144, 189, 86),
+                          color: Color.fromARGB(255, 203, 216, 125),
                           borderRadius: BorderRadius.circular(5.w),
                         ),
                         padding: EdgeInsets.all(4.w),
@@ -357,7 +357,7 @@ class _HomePageState extends State<HomePage> {
                                 children: [
                                   Expanded(
                                     child: Container(
-                                      decoration: BoxDecoration(borderRadius: BorderRadius.circular(10.w), color: Colors.greenAccent),
+                                      decoration: BoxDecoration(borderRadius: BorderRadius.circular(10.w),  color: Color.fromARGB(255, 203, 216, 125),),
                                       padding: EdgeInsets.all(2.w),
                                       child: Text(
                                         "Work",

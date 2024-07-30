@@ -135,7 +135,7 @@ class _CalenderPageState extends State<CalenderPage> {
                             width: 13.w,
                             decoration:const  BoxDecoration(
                               shape: BoxShape.circle,
-                              color: Color.fromARGB(255, 156, 8, 201),
+                              color: Color.fromARGB(255, 105, 76, 241),
                             ),
                             child:const Center(
                                 child: Text(
@@ -239,7 +239,7 @@ class _CalenderPageState extends State<CalenderPage> {
                                 decoration: BoxDecoration(
                                     shape: BoxShape.circle,
                                     color: currentDateSelectedIndex == index
-                                        ? Colors.purple
+                                        ? const Color.fromARGB(255, 105, 76, 241)
                                         : Colors.white),
                                 child: Column(
                                   mainAxisAlignment:
@@ -298,7 +298,7 @@ class _CalenderPageState extends State<CalenderPage> {
                                           width: 2.w,
                                           decoration: BoxDecoration(
                                               color: Color.fromARGB(
-                                                  211, 255, 217, 0),
+                                                  211, 255, 228, 162),
                                               borderRadius:
                                                   BorderRadius.circular(2)),
                                         ),
@@ -361,7 +361,7 @@ class _CalenderPageState extends State<CalenderPage> {
                                           height: 12.h,
                                           width: 2.w,
                                           decoration: BoxDecoration(
-                                              color: Color.fromARGB(210, 187, 255, 0),
+                                              color: Color.fromARGB(210, 222, 234, 143),
                                               borderRadius:
                                                   BorderRadius.circular(2)),
                                         ),
